@@ -34,3 +34,19 @@
   });
   Object.defineProperty(exports, '__esModule', {value: true});
 });
+
+// eva-icons
+(function(factory) {
+  if (typeof module === 'object' && typeof module.exports === 'object') {
+    var v = factory(require, exports);
+    if (v !== undefined) module.exports = v;
+  } else if (typeof define === 'function' && define.amd) {
+    define('eva-icons', ['exports', 'eva'], factory);
+  }
+})(function(exports, eva) {
+  'use strict';
+  Object.keys(eva).forEach(function(key) {
+    exports[key] = eva[key];
+  });
+  Object.defineProperty(exports, '__esModule', {value: true});
+});

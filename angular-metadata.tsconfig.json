@@ -1,7 +1,3 @@
-// Workaround for https://github.com/angular/angular/issues/18810
-//
-// This file is required to run ngc on 3rd party libraries such as @ngrx,
-// to write files like node_modules/@ngrx/store/store.ngsummary.json.
 {
   "compilerOptions": {
     "lib": [
@@ -17,9 +13,11 @@
     "enableSummariesForJit": true
   },
   "include": [
-    "node_modules/@angular/**/*"
+    "node_modules/@angular/**/*",
+    "node_modules/@nebular/**/*"
   ],
   "exclude": [
+    "node_modules/@angular/**/schematics/**",
     "node_modules/@angular/common/upgrade*",
     "node_modules/@angular/router/upgrade*",
     "node_modules/@angular/bazel/**",

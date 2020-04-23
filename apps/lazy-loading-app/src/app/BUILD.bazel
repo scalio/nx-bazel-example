@@ -26,6 +26,8 @@ ng_module(
         "@npm//@angular/forms",
         "@npm//@angular/platform-browser",
         "@npm//@angular/router",
+        "@npm//@nebular/theme",
+        "@npm//@nebular/eva-icons",
         "@npm//rxjs",
         "@npm//tslib",
     ],
