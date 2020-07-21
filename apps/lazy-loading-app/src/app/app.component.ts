@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { SignedUser } from '@api-interface';
+import { ISignedUser } from '@proto-interface';
 
 import { AuthenticationService } from './auth/authentication.service';
 
 @Component({ selector: 'lazy-root', templateUrl: 'app.component.html' })
 export class AppComponent {
-  currentUser: SignedUser;
+  currentUser: Required<ISignedUser>;
 
   constructor(
     private router: Router,

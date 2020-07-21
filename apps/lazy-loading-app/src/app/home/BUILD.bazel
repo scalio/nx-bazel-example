@@ -13,7 +13,7 @@ ng_module(
     deps = [
         "//apps/lazy-loading-app/src/app/alert",
         "//apps/lazy-loading-app/src/app/auth",
-        "//libs/api-interface/src",
+        "//libs/proto-interface/src",
         "@npm//@angular/common",
         "@npm//@angular/core",
         "@npm//@angular/forms",

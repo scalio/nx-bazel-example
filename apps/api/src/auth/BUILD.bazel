@@ -11,7 +11,7 @@ ts_library(
     module_name = "@api/auth",
     deps = [
         "//apps/api/src/user",
-        "//libs/api-interface/src",
+        "//libs/proto-interface/src",
         "@npm//@nestjs/common",
         "@npm//@nestjs/jwt",
         "@npm//@nestjs/passport",

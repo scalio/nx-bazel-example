@@ -2,7 +2,7 @@ import { Controller, Get, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { ApiBearerAuth } from '@nestjs/swagger';
 
-import { Message } from '@api-interface';
+import { IMessage } from '@proto-interface';
 
 import { AppService } from './app.service';
 
@@ -13,7 +13,7 @@ export class AppController {
 
   @Get('hello')
   @UseGuards(AuthGuard('jwt'))
-  getData(): Message {
+  getData(): Required<IMessage> {
     return this.appService.getData();
   }
 }

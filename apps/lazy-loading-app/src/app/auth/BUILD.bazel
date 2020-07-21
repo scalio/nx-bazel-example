@@ -10,7 +10,7 @@ ng_module(
     ),
     tsconfig = "//:tsconfig.json",
     deps = [
-        "//libs/api-interface/src",
+        "//libs/proto-interface/src",
         "@npm//@angular/common",
         "@npm//@angular/core",
         "@npm//@angular/router",

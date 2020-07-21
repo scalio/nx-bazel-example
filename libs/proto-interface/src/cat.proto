@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message Cat {
+  int32 id = 1;
+  string name = 2;
+  int32 age = 3;
+}
+
+message CreateCatDto {
+  string name = 1;
+  int32 age = 2;
+}

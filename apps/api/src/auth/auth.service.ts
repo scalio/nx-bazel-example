@@ -1,6 +1,6 @@
-import { SignedUser } from '@api-interface';
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
+import { ISignedUser } from '@proto-interface';
 import { UserService } from '../user/user.service';
 import { JwtPayload } from './interfaces/jwt-payload.interface';
 
@@ -13,7 +13,7 @@ export class AuthService {
     private readonly jwtService: JwtService,
   ) {}
 
-  async createToken(username: string): Promise<SignedUser> {
+  async createToken(username: string): Promise<Required<ISignedUser>> {
     const { firstName, lastName } = await this.userService.getUserByUsername(username);
     const payload: JwtPayload = { username, firstName, lastName };
 

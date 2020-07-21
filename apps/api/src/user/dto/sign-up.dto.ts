@@ -1,8 +1,8 @@
-import { ISignUpDto } from '@api-interface';
 import { ApiModelProperty } from '@nestjs/swagger';
+import { ISignUpDto } from '@proto-interface';
 import { IsNotEmpty, IsString } from 'class-validator';
 
-export class SignUpDto implements ISignUpDto {
+export class SignUpDto implements Required<ISignUpDto> {
   @ApiModelProperty()
   @IsString()
   @IsNotEmpty()

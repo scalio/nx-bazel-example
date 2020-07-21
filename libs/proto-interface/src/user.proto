@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+message User {
+  int32 id = 1;
+  string username = 2;
+  string firstName = 3;
+  string lastName = 4;
+  string password = 5;
+}
+
+message SignUpDto {
+  string username = 1;
+  string firstName = 2;
+  string lastName = 3;
+  string password = 4;
+}
+
+message SignInDto {
+  string username = 1;
+  string password = 2;
+}
+
+message SignedUser {
+  string username = 1;
+  string firstName = 2;
+  string lastName = 3;
+  int32 expiresIn = 4;
+  string token = 5;
+}

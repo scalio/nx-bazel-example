@@ -1,0 +1,21 @@
+package(default_visibility = ["//:__subpackages__"])
+
+load("@npm_bazel_typescript//:index.bzl", "ts_library", "ts_proto_library")
+
+proto_library(
+    name = "proto",
+    srcs = glob(["*.proto"]),
+)
+
+ts_proto_library(
+    name = "ts_proto",
+    deps = [":proto"],
+)
+
+ts_library(
+    name = "src",
+    srcs = glob(["index.ts"]),
+    module_name = "@proto-interface",
+    tsconfig = "//:tsconfig.json",
+    deps = [":ts_proto"],
+)

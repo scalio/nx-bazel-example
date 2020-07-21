@@ -1,8 +1,8 @@
-import { CatModel } from '@api-interface';
+import { ICat } from '@proto-interface';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Cat implements CatModel {
+export class Cat implements Required<ICat> {
   @PrimaryGeneratedColumn()
   id: number;
 
